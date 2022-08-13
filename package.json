@@ -1,0 +1,15 @@
+{
+  "name": "react-simple-navbar",
+  "version": "1.0.3",
+  "description": "simplest navbar for your react project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "react-simple-navbar"
+  ],
+  "author": "sam abdul",
+  "license": "ISC"
+}

@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+nav .input:hover {
+    background-color: #f4f4f4;
+}
+
+logo {
+    display: block;
+    float: left;
+    font-size: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+ul {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label cite {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+label cite:before,
+label cite:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label cite:before {
+    top: 5px;
+}
+
+label cite:after {
+    top: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked~ul {
+    max-height: 240px;
+}
+
+input:checked~label cite {
+    background: transparent;
+}
+
+input:checked~label cite:before {
+    transform: rotate(-45deg);
+}
+
+input:checked~label cite:after {
+    transform: rotate(45deg);
+}
+
+input:checked~label:not(.steps) cite:before,
+input:checked~label:not(.steps) cite:after {
+    top: 0;
+}
+
+
+
+@media (min-width: 48em) {
+    li {
+        float: left;
+    }
+
+    ul {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    label {
+        display: none;
+    }
+}
